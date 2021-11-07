@@ -1,0 +1,55 @@
+ONLINE RAILWAY TICKET RESERVATION SYSTEM
+
+1)The application consists of 3 programs: client.c, server.c, IdFileGenerator.c
+2)Place all 3 files in one folder. First compile and run IdFileGenerator.c. Commands to compile and run IdFileGenerator.c:
+		gcc IdFileGenerator.c -o IdFileGenerator
+		./IdFileGenerator
+3)Open 2 separate terminal tabs.Compile and run server.c in one tab.Commands to 	run:
+		gcc server.c -o server
+		./server
+4)Compile and run client.c in 2nd tab.Commands to run:
+		gcc client.c -o client
+		./client
+5)After running client, you will get prompt to choose one of below options:
+		1)Customer
+		2)Agent
+		3)Admin
+6)After choosing either customer or agent, you will get prompt:
+		1)Register
+		2)Login
+7)The register option can be used to add new customer/agent. You need to specify username and password. Please specify unique username.
+8)The login option can be used to login into the system. After successful login, you will get below options:
+		1)Book ticket	
+		2)View previous bookings
+		3)Update booking
+		4)Cancel booking
+		5)Search booking
+		6)Exit
+9)Option 1 can be choosed to book ticket.It will display list of available trains and their details. You need to enter train number,class of seats and #seats.You need to submit these details within 3 minutes to make a booking otherwise booking will fail with session timeout.For a successful booking you will receive unique booking id.
+10)Option 2 can be choosed to view history of bookings made.
+11)Option 3 is used to update booking. Specify booking id and then you can update the class of seats of the ticket.
+12)Option 4 is used to cancel ticket. cancelled tickets will not be displayed in history of bookings.
+13)Option 5 is used to search for specific booking.
+14)The admin credentials are hardcoded in the system.
+		admin username: admin
+		admin password: admin
+15)After admin login, you will get below options:
+		1)Add train
+		2)View all trains
+		3)Update train details
+		4)Cancel train
+		5)Search booking
+		6)View all bookings for a train
+		7)Exit
+16)Option 1 can be used to add new train. Option 2 is used view all trains. Option 3 is used to update train details like total seats,etc. Option 4 is used to cancel a train. Option 5 is used to search for a specific booking.Option 6 is used to get all bookings for a specific train.
+17)Below are all files details:
+		client.c - client side code of application
+		server.c - server side code of application
+		IdFileGenerator.c - This program creates required files in the system
+		trains - stores all train details
+		uniqueIds - this file is used to generate unique booking id for each booking
+		<username> - stores username,password of specific user
+		bookings_<username> - stores all bookings of that particular user
+		allbookings - stores all bookings that are made in the system
+
+
